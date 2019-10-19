@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess the Pokemon!</title>
+
+    <!--Stilovi-->
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body id="bs-or">
+    <div class="modal-body">
+    <!--NASLOV SLIKA-->
+    <div class="container-fluid header-wrapper">
+        <img class="header-img" src="Images/pokemon.png" alt="Who's that Pokemon?"/>
+    </div>
+
+    <!--SADRŽAJ-->
+    <div class="container-fluid content-wrapper">
+            <div class="poke-img-wrapper">
+                <div class="poke-img-bg">
+                    <img class="pokemon-img" src="Images/placeholder.png" alt="placeholder image"/>
+                </div>
+            </div>
+            <div class="guessing">
+                <div class="form-group">
+                    <label for="inputPokemon"></label>
+                    <input type="text" class="form-control" id="inputPokemon" placeholder="Enter a Pokemon name">
+                </div>
+                <button type="submit" class="btn btn-primary guess-btn">Guess</button>
+                <button type="button" class="btn btn-primary pokedex-btn">Pokedex</button>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="count-wrapper"><p class="progress-count">0/151</p></div>
+            </div>
+    </div>
+    </div>
+
+
+    <!--Pokedex-->
+    <div class="container pokedex-wrapper">
+        <div class="pokedex-row row">
+            <!--lijeva strana - lista pokemona-->
+            <div class="pokedex-left">
+                <div class="col-md pokedex-list">
+                    <h1 class="my-pokedex">My Pokedex</h1>
+                    <p class="pokedex-prog">(0/151)</p>
+                    <br>
+                    <span class="pokedex-img">
+                        <img value="1" class="pokedex-img-placeholder" src="Images/placeholder.png" alt="placeholder image"/>
+                    </span>
+                </div>
+            </div>
+            <!--desna strana - podaci o oznacenom pokemonu-->
+            <div class="pokedex-right">
+                <span class="close">&times;</span>
+                <div class="col-md pokemon-info">
+                    <div class="info-img-wrapper">
+                        <img class="info-placeholder" src="Images/placeholder.png" alt="placeholder image"/>
+                    </div>
+                    <div class="pokemon-id">#??</div>
+                    <div class="pokemon-name">???</div>
+                    <div class="container stats-container">
+                        <div class="row pokemon-hp">
+                            <div class="col hp">HP</div>
+                            <div class="col hp-value">??</div>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="row pokemon-speed">
+                            <div class="col speed">SPEED</div>
+                            <div class="col speed-value">??</div>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="row pokemon-att">
+                            <div class="col att">ATTACK</div>
+                            <div class="col att-value">??</div>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="row pokemon-def">
+                            <div class="col def">DEFENSE</div>
+                            <div class="col def-value">??</div>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Javascript import-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+    <script> const P = new Pokedex.Pokedex(); </script>
+    <script src="script.js"></script>
+</body>
+</html>
